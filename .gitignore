@@ -128,6 +128,9 @@ gradle-app.setting
 modules.xml
 .idea/misc.xml
 *.ipr
+.classpath
+.project
+.settings
 
 # End of https://www.gitignore.io/api/node,gradle,intellij+all
 

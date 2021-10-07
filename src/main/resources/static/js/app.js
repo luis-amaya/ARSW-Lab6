@@ -34,15 +34,20 @@ var app = (function () {
             })
 
             if (arreglo.length > 1) {
-                var valorTotal = arreglo.reduce(function (total, valor) {
-                    return total.value + valor.value;
-                });
+                var valorTotal = 0;
+                for (let index = 0; index < arreglo.length; index++) {
+                    valorTotal = valorTotal + arreglo[index].value;
+                    console.log(valorTotal, arreglo[index].value);
+                }
             } else {
                 var valorTotal = arreglo[0].value;
+                console.log(arreglo);
             }
 
             document.getElementById("autorLabel").innerHTML = _author;
             document.getElementById("puntosLabel").innerHTML = valorTotal;
+            console.log(arreglo);
+            console.log(valorTotal);
         } else {
             console.log("no encontro autor");
             limpiarVista();
@@ -139,6 +144,7 @@ var app = (function () {
             _plano = name;
             blueprint = null;
             api.createnewbluesprint(_author, name);
+            limpiarVista();
         } else {
             alert("Elija un autor");
         }

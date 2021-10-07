@@ -30,6 +30,7 @@ var apiclient = (function () {
         }).then(
             function () {
                 app.updatebluesprint(blueprint.author);
+                console.log("update");
             },
             function () {
                 console.log("Error");
@@ -59,19 +60,16 @@ var apiclient = (function () {
 
     var deleteblueprint = function (blueprint) {
         var _urlSend = `${_url}${blueprint.author}/${blueprint.name}`;
+        console.log(_urlSend);
         return $.ajax({
             url: _urlSend,
-            type: "DELETE",
+            type: 'DELETE',
             contentType: "application/json",
-        }).then(
-            function () {
+            success: function () {
                 alert("Se ha eliminado el plano" + blueprint.name);
                 app.updatebluesprint(blueprint.author);
-            },
-            function () {
-                console.log("Error");
             }
-        );
+        })
     };
 
 
