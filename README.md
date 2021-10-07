@@ -58,3 +58,19 @@ Este laboratorio tiene como fin, actualizar en Front para que se pueda comunicar
 	* Haga DELETE del recurso correspondiente.
 	* Haga GET de los planos ahora disponibles.
 
+## Pruebas de la solución
+
+1. Prueba de dibujo.
+![](img/solve/DrawTest.PNG)
+
+2. Crear un nuevo blueprint.
+![](img/solve/CreateANewOne.PNG)
+![](img/solve/CreateANewOne-2.PNG)
+
+3. Save y Update.
+![](img/solve/Save-Update.PNG)
+
+4. Delete.
+![](img/solve/Delete.PNG)
+![](img/solve/Delete-1.PNG)
+
